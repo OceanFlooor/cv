@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "intro": "^1.0.0",
+    "parcel": "^1.12.4"
+  }
+}

@@ -1,0 +1,56 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.html {
+  overflow: auto;
+}
+
+.wrapper {
+  position: relative;
+  padding: 10px;
+  word-wrap: break-word;
+}
+
+#div1 {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#div1::before,
+#div1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+}
+
+#div1::before {
+  top: 0;
+}
+#div1::after {
+  bottom: 0;
+}
+
+@media screen and (max-width: 450px) {
+  .wrapper {
+    height: 100vh;
+  }
+
+  #intro {
+    height: calc(100vh - 250px);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    word-wrap: break-word;
+    width: 100vw;
+    padding: 0 10px;
+  }
+}
